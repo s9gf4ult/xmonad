@@ -60,18 +60,19 @@ library
                         XMonad.StackSet
     other-modules:      Paths_xmonad
 
-    build-depends: base < 5 && >=3,
-                   containers,
-                   data-default,
-                   directory,
-                   extensible-exceptions,
-                   filepath,
-                   setlocale,
-                   mtl,
-                   process,
-                   unix,
-                   utf8-string >= 0.3 && < 1.1,
-                   X11>=1.5 && < 1.7
+    build-depends: X11>=1.5 && < 1.7
+                 , base < 5 && >=3
+                 , containers
+                 , data-default
+                 , directory
+                 , dynamic-state
+                 , extensible-exceptions
+                 , filepath
+                 , mtl
+                 , process
+                 , setlocale
+                 , unix
+                 , utf8-string >= 0.3 && < 1.1
 
     if true
         ghc-options:        -funbox-strict-fields -Wall

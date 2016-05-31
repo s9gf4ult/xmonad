@@ -50,6 +50,7 @@ import System.Directory
 import System.Exit
 import Graphics.X11.Xlib
 import Graphics.X11.Xlib.Extras (Event)
+import Data.DynamicState
 import Data.Typeable
 import Data.List ((\\))
 import Data.Maybe (isJust,fromMaybe)
@@ -116,6 +117,8 @@ data XConfig l = XConfig
     , rootMask           :: !EventMask           -- ^ The root events that xmonad is interested in
     , handleExtraArgs    :: !([String] -> XConfig Layout -> IO (XConfig Layout))
                                                  -- ^ Modify the configuration, complain about extra arguments etc. with arguments that are not handled by default
+    , payload            :: !DynamicState        -- ^ Arbitrary data to work with
+
     }
 
 
